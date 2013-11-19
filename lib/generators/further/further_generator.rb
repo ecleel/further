@@ -11,6 +11,6 @@ class FurtherGenerator < Rails::Generators::NamedBase
 
   def create_model_file
     template "further_information.rb", "app/models/further_information.rb"
-    migration_template "create_further_information.rb", "db/migrate/create_further_information.rb"
+    migration_template "create_further_informations.rb", "db/migrate/create_further_informations.rb"
   end
 end
