@@ -11,6 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20131119113259) do
+
+  create_table "further_informations", :force => true do |t|
+    t.integer  "furtherable_id"
+    t.string   "furtherable_type"
+    t.text     "info"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "further_informations", ["furtherable_id"], :name => "index_further_informations_on_furtherable_id"
+  add_index "further_informations", ["furtherable_type"], :name => "index_further_informations_on_furtherable_type"
+
+  create_table "sites", :force => true do |t|
+    t.string   "title"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end
