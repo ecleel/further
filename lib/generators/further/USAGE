@@ -1,0 +1,10 @@
+Description:
+    Copy further_information.rb to app/models/
+    Copy create_further_information.rb to db/migrates
+
+Example:
+    rails generate further
+
+    This will create:
+        app/models/further_information.rb
+        db/migrates/create_further_information.rb
