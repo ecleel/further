@@ -1,10 +1,7 @@
-# further
+# further [![Gem Version](https://badge.fury.io/rb/further.png)](http://badge.fury.io/rb/further)
 
-Add more data in you model without adding a column in your table.
- 
-
-This gem provides a simple and extremely flexible way to upload files from Ruby applications.
-It works well with Rack based web applications, such as Ruby on Rails.
+This gem provides a simple and extremely flexible way to add extra data into your models
+without adding new column for that.
 
 
 ## Installation
