@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131119113259) do
+ActiveRecord::Schema.define(:version => 20131124112828) do
 
   create_table "further_informations", :force => true do |t|
     t.integer  "furtherable_id"
