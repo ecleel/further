@@ -11,7 +11,8 @@ Gem::Specification.new do |s|
   s.email       = ["ecleeld@gmail.com"]
   s.homepage    = "https://github.com/ecleel/further"
   s.summary     = "Add more data in you model without adding a column in your table."
-  s.description = ""
+  s.description = "This gem provides a simple and extremely flexible way to add extra data into your models without adding new column for that."
+  s.license     = 'MIT'
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
