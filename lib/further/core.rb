@@ -21,20 +21,26 @@ module Further
     module LocalInstanceMethods
 
       def further_info(attributes = {})
-        if self.further_information.present?
-          if attributes.present?
-            self.further_information.update_attributes info: attributes
+        further = self.further_information
+        info = {}
+        
+        if attributes.present? # Set
+          
+          if further
+            attributes.each_pair do |key, value|
+              further.info[key] = value
+            end
+            further.save
           else
-            self.further_information.info
+            further = self.build_further_information info: attributes
+            further.save
           end
-        else
-          if attributes.present?
-            info = self.build_further_information info: attributes
-            info.save
-          else
-            {}
-          end
+          info = further.info
+
+        else # Get          
+          info = further.info if further
         end
+        info
       end
 
     end
