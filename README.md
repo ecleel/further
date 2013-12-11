@@ -45,7 +45,15 @@ class Site < ActiveRecord::Base
 end
 ```
 
-Now you can add extra data in site model
+Open the other model that you want to use further too:
+
+```ruby
+class IP < ActiveRecord::Base
+  further :data
+end
+```
+
+Now you can add extra data in Site and IP model
 
 ```ruby
 s = Site.create info: {alexa_rank: 41253, last_updated: DateTime.now}
@@ -54,6 +62,10 @@ s.info[:alexa_rank]  # => 41253
 s.info page_rank: 3
 s.info[:page_rank]  # => 3
 s.info  # => {:alexa_rank=>41253, :last_updated=>Mon, 25 Nov 2013 18:43:22 +0300, :page_rank=>3}
+
+IP.first.data # => {}
+IP.first.data last_check: DateTime.now
+# => {:last_check=>Mon, 25 Nov 2013 18:44:13 +0300 }
 ```
 
 
